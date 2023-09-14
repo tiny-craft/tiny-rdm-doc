@@ -7,12 +7,12 @@ export default defineConfig({
     title: "Tiny RDM",
     description: "Tiny RDM Doc Site",
     head: [
-        ['link', {rel: 'icon', type: 'image/svg+xml', href: 'images/logo.svg'}],
-        ['link', {rel: 'icon', type: 'image/png', href: 'images/appicon.png'}],
+        ['link', {rel: 'icon', type: 'image/svg+xml', href: '/images/logo.svg'}],
+        ['link', {rel: 'icon', type: 'image/png', href: '/images/appicon.png'}],
     ],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        logo: 'images/logo.svg',
+        logo: '/images/logo.svg',
         siteTitle: 'Tiny RDM',
 
         sidebar: [

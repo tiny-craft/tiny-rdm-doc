@@ -15,7 +15,8 @@ export const zhConfig = {
         nav: [
             {text: '主页', link: '/'},
             {text: '更新日志', link: '#'},
-            {text: 'Redis指南', link: '#'}
+            {text: 'Redis指南', link: '#'},
+            {text: '关于', link: '#'}
         ],
         footer: {
             message: '基于GPL-3.0开源许可协议',

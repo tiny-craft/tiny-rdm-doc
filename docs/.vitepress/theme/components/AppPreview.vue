@@ -1,30 +1,34 @@
 <script setup>
 import DefaultTheme from "vitepress/theme"
 import {useData} from "vitepress"
-import {computed} from 'vue'
+import {computed, ref, onMounted} from 'vue'
 
 const {Layout} = DefaultTheme
 const {page, isDark, lang, frontmatter: fm} = useData()
-// const {name, text} = frontmatter.hero
+
+const loaded = ref(false)
+onMounted(() => {
+    loaded.value = true
+})
+
 const preview = computed(() => {
-    return `/images/screenshots/${isDark.value ? 'dark' : 'light'}_${lang.value}.png`
+    // do not display preview image if not finish loading
+    if (!loaded.value) {
+        return ''
+    }
+    return `/images/screenshots/${!!isDark.value ? 'dark' : 'light'}_${lang.value}.png`
 })
 </script>
 
 <template>
-  <Layout>
-    <template #home-hero-after>
-      <div class="preview-wrapper">
-        <div class="preview-inner">
-          <img :src="preview" alt="preview"/>
-        </div>
-      </div>
-    </template>
-  </Layout>
+  <div class="preview-wrapper">
+    <div class="preview-inner">
+      <img :src="preview" alt="preview"/>
+    </div>
+  </div>
 </template>
 
-<style>
-
+<style scoped>
 .preview-wrapper {
     margin-top: -30px;
     padding: 0 24px 24px;

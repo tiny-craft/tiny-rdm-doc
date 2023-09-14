@@ -14,8 +14,9 @@ export const enConfig = {
     themeConfig: {
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'Update Log', link: '#'},
-            {text: 'Redis Guide', link: '#'}
+            {text: 'Changelog', link: '#'},
+            {text: 'Redis Guide', link: '#'},
+            {text: 'About', link: '#'}
         ],
         footer: {
             message: 'Released under the GPL-3.0 License.',
