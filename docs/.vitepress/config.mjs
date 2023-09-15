@@ -10,7 +10,7 @@ export default defineConfig({
         ['link', {rel: 'icon', type: 'image/svg+xml', href: '/images/logo.svg'}],
         ['link', {rel: 'icon', type: 'image/png', href: '/images/appicon.png'}],
         ['script', {async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-KWTD0BYWRK'}],
-        ['script', {}, 'window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag(\'js\', new Date());\ngtag(\'config\', \'G-KWTD0BYWRK\');']
+        ['script', {}, `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-KWTD0BYWRK');`]
     ],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
