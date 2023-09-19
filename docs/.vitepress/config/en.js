@@ -1,4 +1,4 @@
-export const META_URL = 'https://rdm.tinycraft.cc'
+export const META_URL = 'https://redis.tinycraft.cc'
 export const META_TITLE = 'Tiny RDM'
 export const META_DESCRIPTION = 'A Modern Lightweight Redis Desktop Manager.'
 
