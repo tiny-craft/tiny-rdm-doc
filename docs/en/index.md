@@ -29,11 +29,11 @@ features:
     details: Offering dark and light theme with well-polished ui for an enhanced user experience.
   - title: Cross Platform
     details: Support mainstream version of Mac,Windows, and Linux
-    linkText: 下载地址
+    linkText: Download
     link: https://github.com/tiny-craft/tiny-rdm/releases
   - title: Open Source
     details: This software is completely open source, feel safe to use and share it.
-    linkText: 源码地址
+    linkText: Source
     link: https://github.com/tiny-craft/tiny-rdm
 ---
 
