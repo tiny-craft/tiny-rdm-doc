@@ -33,14 +33,14 @@ export default defineConfig({
     },
     locales: {
         root: {
+            label: 'English',
+            lang: 'en',
+            ...enConfig
+        },
+        zh: {
             label: '中文',
             lang: 'zh',
             ...zhConfig
         },
-        en: {
-            label: 'English',
-            lang: 'en',
-            ...enConfig
-        }
     },
 })
