@@ -1,6 +1,6 @@
 export const META_URL = 'https://redis.tinycraft.cc'
 export const META_TITLE = 'Tiny RDM'
-export const META_DESCRIPTION = '一个现在化的轻量Redis桌面管理工具'
+export const META_DESCRIPTION = '新一代轻量级Redis GUI,直观管理Redis数据库,支持多平台Windows、Mac和Linux系统,安装简单迅速,连接本地及远程Redis,可视化展示键值数据,快速操作键值对,内置控制台直接运行命令,数据浏览备份导出,慢日志查询,新手高级用户首选,大幅提高Redis应用开发效率。'
 
 export const zhConfig = {
     description: META_DESCRIPTION,

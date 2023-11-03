@@ -24,9 +24,9 @@ hero:
 
 features:
   - title: Super Lightweight
-    details: Base on Webview2.The packages size is less than 10MB on all platforms.No more browser engine inside.
+    details: Base on Webview2, No more browser engine inside.
   - title: Friendly Appearance
-    details: Offering dark and light theme with well-polished ui for an enhanced user experience.
+    details: Offering dark and light theme, visualize key-value data manipulation.
   - title: Cross Platform
     details: Support mainstream version of Mac,Windows, and Linux
     linkText: Download

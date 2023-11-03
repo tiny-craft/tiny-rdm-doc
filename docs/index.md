@@ -24,9 +24,9 @@ hero:
 
 features:
   - title: 极致轻量
-    details: 基于Webview2，所有平台包体均低于10MB，无需包含浏览器内核
+    details: 基于Webview2，无内嵌浏览器内核
   - title: 友好外观体验
-    details: 提供外观深色/浅色外观，拥有精心打磨界面布局和使用体验
+    details: 提供外观深色/浅色外观，可视化键值数据操作
   - title: 跨桌面平台
     details: 支持Mac/Windows/Linux主流版本系统
     linkText: 下载地址
