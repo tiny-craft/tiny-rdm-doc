@@ -9,8 +9,8 @@ hero:
   name: "Tiny RDM"
   # text: "Tiny RDM"
   tagline: |
-    A modern redis desktop manager.
-    A better redis GUI client.
+    A modern Redis desktop manager.
+    A better Redis GUI client.
   image:
     src: /images/appicon.png
     alt: Tiny RDM
