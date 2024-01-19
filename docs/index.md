@@ -9,8 +9,8 @@ hero:
   name: "Tiny RDM"
   # text: "Tiny RDM"
   tagline: |
-    A modern Redis desktop manager.
-    A better Redis GUI client.
+    Colorful and Wonderful
+    A Modern Redis Desktop Manager
   image:
     src: /images/appicon.png
     alt: Tiny RDM
@@ -24,16 +24,16 @@ hero:
 
 features:
   - title: Super Lightweight
-    details: Base on Webview2, No more browser engine inside.
+    details: Tiny package, install anywhere, launch anywhere.
   - title: Friendly Appearance
-    details: Offering dark and light theme, visualize key-value data manipulation.
+    details: An intuitive interface with light and dark themes for effortless data visualization.
   - title: Cross Platform
-    details: Support mainstream version of Mac,Windows, and Linux
+    details: Support major version of Mac, Windows, and Linux
     linkText: Download
     link: https://github.com/tiny-craft/tiny-rdm/releases
   - title: Open Source
     details: This software is completely open source, feel safe to use and share it.
-    linkText: Source
+    linkText: Source Code
     link: https://github.com/tiny-craft/tiny-rdm
 ---
 
