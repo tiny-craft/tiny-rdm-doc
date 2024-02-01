@@ -10,6 +10,11 @@ export default defineConfig({
         ['link', {rel: 'icon', type: 'image/svg+xml', href: '/images/logo.svg'}],
         ['link', {rel: 'icon', type: 'image/png', href: '/images/appicon.png'}],
         ['script', {async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-KWTD0BYWRK'}],
+        ['script', {
+            async: true,
+            src: 'https://analytics.tinycraft.cc/script.js',
+            'data-website-id': "2dfd7c4c-52a2-47b3-85bc-51a397275944"
+        }],
         ['script', {}, `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-KWTD0BYWRK');`]
     ],
     themeConfig: {
