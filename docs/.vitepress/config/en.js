@@ -14,13 +14,39 @@ export const enConfig = {
     themeConfig: {
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'Changelog', link: '#'},
+            {text: 'Changelog', link: '/changelog/v1.0.1', activeMatch: '/changelog/'},
             {text: 'Redis Guide', link: '#'},
             {text: 'About', link: '#'}
         ],
+        sidebar: {
+            '/changelog/': {base: '/changelog/', items: sidebarChangelog()},
+        },
         footer: {
             message: 'Released under the GPL-3.0 License.',
             copyright: 'Copyright © 2023-present Tiny Craft'
         }
     }
+}
+
+function sidebarChangelog() {
+    return [{
+        text: 'Changelog',
+        collapsed: false,
+        items: [
+            {text: 'v1.1.9', link: 'v1.1.9'},
+            {text: 'v1.1.8', link: 'v1.1.8'},
+            {text: 'v1.1.6', link: 'v1.1.6'},
+            {text: 'v1.1.5', link: 'v1.1.5'},
+            {text: 'v1.1.4', link: 'v1.1.4'},
+            {text: 'v1.1.2', link: 'v1.1.2'},
+            {text: 'v1.1.0', link: 'v1.1.0'},
+            {text: 'v1.0.9', link: 'v1.0.9'},
+            {text: 'v1.0.8', link: 'v1.0.8'},
+            {text: 'v1.0.7', link: 'v1.0.7'},
+            {text: 'v1.0.5', link: 'v1.0.5'},
+            {text: 'v1.0.4', link: 'v1.0.4'},
+            {text: 'v1.0.2', link: 'v1.0.2'},
+            {text: 'v1.0.1', link: 'v1.0.1'},
+        ]
+    },]
 }

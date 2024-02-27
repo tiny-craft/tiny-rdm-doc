@@ -22,15 +22,7 @@ export default defineConfig({
         logo: '/images/logo.svg',
         siteTitle: 'Tiny RDM',
 
-        sidebar: [
-            {
-                text: 'Examples',
-                items: [
-                    {text: 'Markdown Examples', link: '/markdown-examples'},
-                    {text: 'Runtime API Examples', link: '/api-examples'}
-                ]
-            }
-        ],
+        sidebar: [],
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/tiny-craft/tiny-rdm'},
