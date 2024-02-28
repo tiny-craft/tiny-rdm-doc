@@ -16,8 +16,8 @@ export const enConfig = {
             {text: 'Home', link: '/'},
             {text: 'User Guide', link: '#'},
             {text: 'Changelog', link: '/changelog/' + lastChangelog(), activeMatch: '/changelog/'},
-            {text: 'Redis Guide', link: '#'},
-            {text: 'About', link: '#'}
+            // {text: 'Redis Guide', link: '#'},
+            // {text: 'About', link: '#'}
         ],
         sidebar: {
             '/changelog/': {base: '/changelog/', items: sidebarChangelog()},
@@ -57,7 +57,7 @@ function sidebarChangelog() {
 function lastChangelog() {
     const clist = sidebarChangelog()
     for (const item of clist) {
-        if (item.text === '更新日志') {
+        if (item.text === 'Changelog') {
             if (item.items.length > 0) {
                 return item.items[0].text
             }

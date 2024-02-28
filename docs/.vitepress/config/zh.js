@@ -16,8 +16,8 @@ export const zhConfig = {
             {text: '主页', link: '/zh/'},
             {text: '用户手册', link: '#'},
             {text: '更新日志', link: '/zh/changelog/' + lastChangelog(), activeMatch: '/zh/changelog/'},
-            {text: 'Redis指南', link: '#'},
-            {text: '关于', link: '#'}
+            // {text: 'Redis指南', link: '#'},
+            // {text: '关于', link: '#'}
         ],
         sidebar: {
             '/zh/changelog/': {base: '/zh/changelog/', items: sidebarChangelog()},
