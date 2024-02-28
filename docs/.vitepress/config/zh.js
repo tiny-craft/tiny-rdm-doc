@@ -14,7 +14,8 @@ export const zhConfig = {
     themeConfig: {
         nav: [
             {text: '主页', link: '/zh/'},
-            {text: '更新日志', link: '/zh/changelog/v1.0.1', activeMatch: '/zh/changelog/'},
+            {text: '用户手册', link: '#'},
+            {text: '更新日志', link: '/zh/changelog/' + lastChangelog(), activeMatch: '/zh/changelog/'},
             {text: 'Redis指南', link: '#'},
             {text: '关于', link: '#'}
         ],
@@ -29,24 +30,38 @@ export const zhConfig = {
 }
 
 function sidebarChangelog() {
-    return [{
-        text: '更新日志',
-        collapsed: false,
-        items: [
-            {text: 'v1.1.9', link: 'v1.1.9'},
-            {text: 'v1.1.8', link: 'v1.1.8'},
-            {text: 'v1.1.6', link: 'v1.1.6'},
-            {text: 'v1.1.5', link: 'v1.1.5'},
-            {text: 'v1.1.4', link: 'v1.1.4'},
-            {text: 'v1.1.2', link: 'v1.1.2'},
-            {text: 'v1.1.0', link: 'v1.1.0'},
-            {text: 'v1.0.9', link: 'v1.0.9'},
-            {text: 'v1.0.8', link: 'v1.0.8'},
-            {text: 'v1.0.7', link: 'v1.0.7'},
-            {text: 'v1.0.5', link: 'v1.0.5'},
-            {text: 'v1.0.4', link: 'v1.0.4'},
-            {text: 'v1.0.2', link: 'v1.0.2'},
-            {text: 'v1.0.1', link: 'v1.0.1'},
-        ]
-    },]
+    return [
+        {
+            text: '更新日志',
+            collapsed: false,
+            items: [
+                {text: 'v1.1.9', link: 'v1.1.9'},
+                {text: 'v1.1.8', link: 'v1.1.8'},
+                {text: 'v1.1.6', link: 'v1.1.6'},
+                {text: 'v1.1.5', link: 'v1.1.5'},
+                {text: 'v1.1.4', link: 'v1.1.4'},
+                {text: 'v1.1.2', link: 'v1.1.2'},
+                {text: 'v1.1.0', link: 'v1.1.0'},
+                {text: 'v1.0.9', link: 'v1.0.9'},
+                {text: 'v1.0.8', link: 'v1.0.8'},
+                {text: 'v1.0.7', link: 'v1.0.7'},
+                {text: 'v1.0.5', link: 'v1.0.5'},
+                {text: 'v1.0.4', link: 'v1.0.4'},
+                {text: 'v1.0.2', link: 'v1.0.2'},
+                {text: 'v1.0.1', link: 'v1.0.1'},
+            ]
+        },
+    ]
+}
+
+function lastChangelog() {
+    const clist = sidebarChangelog()
+    for (const item of clist) {
+        if (item.text === '更新日志') {
+            if (item.items.length > 0) {
+                return item.items[0].text
+            }
+        }
+    }
+    return 'v1.0.0'
 }
