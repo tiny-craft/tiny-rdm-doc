@@ -14,12 +14,13 @@ export const enConfig = {
     themeConfig: {
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'User Guide', link: '#'},
+            {text: 'User Guide', link: '/guide/intro', activeMatch: '/guide/'},
             {text: 'Changelog', link: '/changelog/' + lastChangelog(), activeMatch: '/changelog/'},
             // {text: 'Redis Guide', link: '#'},
             // {text: 'About', link: '#'}
         ],
         sidebar: {
+            '/guide/': {base: '/guide/', items: sidebarUserGuide()},
             '/changelog/': {base: '/changelog/', items: sidebarChangelog()},
         },
         footer: {
@@ -33,7 +34,6 @@ function sidebarChangelog() {
     return [
         {
             text: 'Changelog',
-            collapsed: false,
             items: [
                 {text: 'v1.1.9', link: 'v1.1.9'},
                 {text: 'v1.1.8', link: 'v1.1.8'},
@@ -64,4 +64,21 @@ function lastChangelog() {
         }
     }
     return 'v1.0.0'
+}
+
+function sidebarUserGuide() {
+    return [
+        {
+            text: 'User Guide',
+            items: [
+                {
+                    text: 'Introduction',
+                    items: [
+                        {text: 'About Tiny RDM', link: 'intro'},
+                        {text: 'Installation', link: 'installation'},
+                    ]
+                },
+            ]
+        },
+    ]
 }

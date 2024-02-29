@@ -14,12 +14,13 @@ export const zhConfig = {
     themeConfig: {
         nav: [
             {text: '主页', link: '/zh/'},
-            {text: '用户手册', link: '#'},
+            {text: '用户手册', link: '/zh/guide/intro', activeMatch: '/zh/guide/'},
             {text: '更新日志', link: '/zh/changelog/' + lastChangelog(), activeMatch: '/zh/changelog/'},
             // {text: 'Redis指南', link: '#'},
             // {text: '关于', link: '#'}
         ],
         sidebar: {
+            '/zh/guide/': {base: '/zh/guide/', items: sidebarUserGuide()},
             '/zh/changelog/': {base: '/zh/changelog/', items: sidebarChangelog()},
         },
         footer: {
@@ -33,7 +34,7 @@ function sidebarChangelog() {
     return [
         {
             text: '更新日志',
-            collapsed: false,
+            // collapsed: false,
             items: [
                 {text: 'v1.1.9', link: 'v1.1.9'},
                 {text: 'v1.1.8', link: 'v1.1.8'},
@@ -64,4 +65,30 @@ function lastChangelog() {
         }
     }
     return 'v1.0.0'
+}
+
+function sidebarUserGuide() {
+    return [
+        {
+            text: '简介',
+            items: [
+                {text: '关于Tiny RDM', link: 'intro'},
+                {text: '安装使用', link: 'installation'},
+            ]
+        },
+        {
+            text: '高级配置',
+            items: [
+                {text: '连接服务器', link: 'connection'},
+                {text: '自定义解码', link: 'custom-decoder'},
+                {text: '个性化配置', link: 'custom-config'}
+            ]
+        },
+        {
+            text: '其他',
+            items: [
+                {text: '常见问题', link: 'faq'}
+            ]
+        }
+    ]
 }
