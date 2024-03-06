@@ -80,5 +80,19 @@ function sidebarUserGuide() {
                 },
             ]
         },
+        {
+            text: 'Configuration',
+            items: [
+                {text: 'Connection', link: 'connection'},
+                {text: 'Custom Decoder', link: 'custom-decoder'},
+                {text: 'Personalized', link: 'custom-config'}
+            ]
+        },
+        {
+            text: 'Other',
+            items: [
+                {text: 'Q&A', link: 'faq'}
+            ]
+        }
     ]
 }
