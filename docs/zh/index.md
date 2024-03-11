@@ -14,13 +14,13 @@ hero:
   image:
     src: /images/appicon.png
     alt: Tiny RDM
-  actions:
-    - theme: brand
-      text: 下载
-      link: https://github.com/tiny-craft/tiny-rdm/releases
-    - theme: alt
-      text: 查看源码
-      link: https://github.com/tiny-craft/tiny-rdm
+#  actions:
+#    - theme: brand
+#      text: 下载
+#      link: https://github.com/tiny-craft/tiny-rdm/releases
+#    - theme: alt
+#      text: 查看源码
+#      link: https://github.com/tiny-craft/tiny-rdm
 
 features:
   - title: 极致轻量

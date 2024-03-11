@@ -14,13 +14,13 @@ hero:
   image:
     src: /images/appicon.png
     alt: Tiny RDM
-  actions:
-    - theme: brand
-      text: Download
-      link: https://github.com/tiny-craft/tiny-rdm/releases
-    - theme: alt
-      text: View On GitHub
-      link: https://github.com/tiny-craft/tiny-rdm
+#  actions:
+#    - theme: brand
+#      text: Download
+#      link: https://github.com/tiny-craft/tiny-rdm/releases
+#    - theme: alt
+#      text: View On GitHub
+#      link: https://github.com/tiny-craft/tiny-rdm
 
 features:
   - title: Super Lightweight
