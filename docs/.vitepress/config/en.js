@@ -1,3 +1,5 @@
+import {version} from '../../../package.json'
+
 export const META_URL = 'https://redis.tinycraft.cc'
 export const META_TITLE = 'Tiny RDM'
 export const META_DESCRIPTION = 'Modern lightweight Redis GUI desktop manager, intuitive Redis database administration, supports multi-platform Windows, Mac and Linux, easy fast installation, connect local and remote Redis, visualize key-value data, quickly operate on keys and values, built-in console to execute commands directly, data browsing and export, slow log query, perfect for beginners and experts alike, tremendously improves Redis application development efficiency.'
@@ -12,22 +14,30 @@ export const enConfig = {
         ['meta', {property: 'twitter:description', content: META_DESCRIPTION}],
     ],
     themeConfig: {
-        nav: [
-            {text: 'Home', link: '/'},
-            {text: 'User Guide', link: '/guide/intro', activeMatch: '/guide/'},
-            {text: 'Changelog', link: '/changelog/' + lastChangelog(), activeMatch: '/changelog/'},
-            // {text: 'Redis Guide', link: '#'},
-            // {text: 'About', link: '#'}
-        ],
+        nav: nav(),
         sidebar: {
-            '/guide/': {base: '/guide/', items: sidebarUserGuide()},
-            '/changelog/': {base: '/changelog/', items: sidebarChangelog()},
+            '/guide/': {base: '/guide', items: sidebarUserGuide()},
+            '/changelog/': {base: '/changelog', items: sidebarChangelog()},
         },
         footer: {
             message: 'Released under the GPL-3.0 License.',
             copyright: 'Copyright © 2023-present Tiny Craft'
         }
     }
+}
+
+function nav() {
+    return [
+        {text: 'Home', link: '/'},
+        {text: 'User Guide', link: '/guide/', activeMatch: '/guide/'},
+        {
+            text: 'v' + version, items: [
+                {text: 'Changelog', link: '/changelog/' + lastChangelog(), activeMatch: '/changelog/'},
+            ]
+        }
+        // {text: 'Redis Guide', link: '#'},
+        // {text: 'About', link: '#'}
+    ]
 }
 
 function sidebarChangelog() {
@@ -74,8 +84,8 @@ function sidebarUserGuide() {
                 {
                     text: 'Introduction',
                     items: [
-                        {text: 'About Tiny RDM', link: 'intro'},
-                        {text: 'Installation', link: 'installation'},
+                        {text: 'About Tiny RDM', link: '/'},
+                        {text: 'Installation', link: '/installation'},
                     ]
                 },
             ]
@@ -83,15 +93,15 @@ function sidebarUserGuide() {
         {
             text: 'Configuration',
             items: [
-                {text: 'Connection', link: 'connection'},
-                {text: 'Custom Decoder', link: 'custom-decoder'},
-                {text: 'Personalized', link: 'custom-config'}
+                {text: 'Connection', link: '/connection'},
+                {text: 'Custom Decoder', link: '/custom-decoder/'},
+                {text: 'Personalized', link: '/custom-config'}
             ]
         },
         {
             text: 'Other',
             items: [
-                {text: 'Q&A', link: 'faq'}
+                {text: 'Q&A', link: '/faq'}
             ]
         }
     ]

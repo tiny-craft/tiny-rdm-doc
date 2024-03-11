@@ -1,3 +1,5 @@
+import {version} from '../../../package.json'
+
 export const META_URL = 'https://redis.tinycraft.cc'
 export const META_TITLE = 'Tiny RDM'
 export const META_DESCRIPTION = '新一代轻量级Redis GUI,直观管理Redis数据库,支持多平台Windows、Mac和Linux系统,安装简单迅速,连接本地及远程Redis,可视化展示键值数据,快速操作键值对,内置控制台直接运行命令,数据浏览备份导出,慢日志查询,新手高级用户首选,大幅提高Redis应用开发效率。'
@@ -12,22 +14,30 @@ export const zhConfig = {
         ['meta', {property: 'twitter:description', content: META_DESCRIPTION}],
     ],
     themeConfig: {
-        nav: [
-            {text: '主页', link: '/zh/'},
-            {text: '用户手册', link: '/zh/guide/intro', activeMatch: '/zh/guide/'},
-            {text: '更新日志', link: '/zh/changelog/' + lastChangelog(), activeMatch: '/zh/changelog/'},
-            // {text: 'Redis指南', link: '#'},
-            // {text: '关于', link: '#'}
-        ],
+        nav: nav(),
         sidebar: {
-            '/zh/guide/': {base: '/zh/guide/', items: sidebarUserGuide()},
-            '/zh/changelog/': {base: '/zh/changelog/', items: sidebarChangelog()},
+            '/zh/guide/': {base: '/zh/guide', items: sidebarUserGuide()},
+            '/zh/changelog/': {base: '/zh/changelog', items: sidebarChangelog()},
         },
         footer: {
             message: '基于GPL-3.0开源许可协议',
             copyright: 'Copyright © 2023-present Tiny Craft'
         }
     }
+}
+
+function nav() {
+    return [
+        {text: '主页', link: '/zh/'},
+        {text: '使用指南', link: '/zh/guide/', activeMatch: '/zh/guide/'},
+        {
+            text: 'v' + version, items: [
+                {text: '更新日志', link: '/zh/changelog/' + lastChangelog(), activeMatch: '/zh/changelog/'},
+            ]
+        },
+        // {text: 'Redis指南', link: '#'},
+        // {text: '关于', link: '#'}
+    ]
 }
 
 function sidebarChangelog() {
@@ -72,22 +82,22 @@ function sidebarUserGuide() {
         {
             text: '简介',
             items: [
-                {text: '关于Tiny RDM', link: 'intro'},
-                {text: '安装使用', link: 'installation'},
+                {text: '关于Tiny RDM', link: '/'},
+                {text: '安装使用', link: '/installation'},
             ]
         },
         {
             text: '高级配置',
             items: [
-                {text: '连接服务器', link: 'connection'},
-                {text: '自定义解码', link: 'custom-decoder'},
-                {text: '个性化配置', link: 'custom-config'}
+                {text: '连接服务器', link: '/connection'},
+                {text: '自定义解码', link: '/custom-decoder/'},
+                {text: '个性化配置', link: '/custom-config'}
             ]
         },
         {
             text: '其他',
             items: [
-                {text: '常见问题', link: 'faq'}
+                {text: '常见问题', link: '/faq'}
             ]
         }
     ]

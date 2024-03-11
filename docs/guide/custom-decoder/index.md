@@ -19,13 +19,13 @@ Tiny RDM provides some built-in decoders for universally standardized data decod
 
 Tiny RDM decodes and encodes by executing external cli applications.
 
-To facilitate data transfer between different processes, the raw data will encode into Base64 string before pass to the external application as a parameter, it will also return in Base64. If the external application fails to process the data (e.g., unable to decode), just simply return the plain text `[RDM-ERROR]`.
+To be able to transfer data between different processes, the raw data will encode into Base64 string before pass to the external application as a parameter, it will also return in Base64. If the external application fails to process the data (e.g., unable to decode), just simply return the plain text `[RDM-ERROR]`.
 
 The basic input and output workflow looks like below:
 
 ![decode flow](images/flow.png)
 
-## Creating and Using Custom Decoders/Encoders
+## Creating and Using
 
 Let's walk through an example of creating a PHP serializer and deserializer to demonstrate how to build and use custom decoders and encoders.
 
@@ -89,7 +89,7 @@ Until output `YToxOntzOjY6IuS9oOWlvSI7czo4OiJ0aW55X3JkbSI7fQ==`, both the custom
 
 ### Usage
 
-After building decoder and encoder, let's see how to use them. Since these are PHP scripts, they rely on the PHP runtime, so the usage is as follows:
+After building decoder and encoder, let's see how to use them on the command line. Since these are PHP scripts, they rely on the PHP runtime, so the usage is as follows:
 
 - Decode execution command
 
@@ -111,7 +111,7 @@ In addition to running scripts through their respective environments, you can al
 
 ::: info 说明
 
-- `/path/to/`should be replaced with the directory where the script file is located.
+- `/path/to`should be replaced with the directory where the script file is located.
 - `{VALUE}`is a `placeholder` for the Base64 input content to be passed to the decoder or encoder.
 
 :::
