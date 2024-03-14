@@ -97,7 +97,8 @@ function sidebarUserGuide() {
         {
             text: '其他',
             items: [
-                {text: '常见问题', link: '/faq'}
+                {text: '常见问题', link: '/faq'},
+                {text: '隐私政策', link: '/privacy'}
             ]
         }
     ]

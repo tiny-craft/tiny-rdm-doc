@@ -101,7 +101,8 @@ function sidebarUserGuide() {
         {
             text: 'Other',
             items: [
-                {text: 'Q&A', link: '/faq'}
+                {text: 'Q&A', link: '/faq'},
+                {text: 'Privacy Policy', link: '/privacy'}
             ]
         }
     ]
