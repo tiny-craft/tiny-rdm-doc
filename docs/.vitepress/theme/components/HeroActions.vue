@@ -33,78 +33,166 @@ const downloadMenu = computed(() => {
                 {
                     text: 'Windows x64安装包 (.exe)',
                     link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/TinyRDM_Setup_${version}_windows_x64.exe`,
-                    icon: Windows
+                    icon: Windows,
+                    event: 'download',
+                    eventPlatform: 'windows',
+                    eventType: 'setup',
+                    eventArch: 'x64',
+                    eventLang: 'zh'
                 },
                 {
                     text: 'Windows x64绿色版 (.zip)',
                     link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/TinyRDM_Portable_${version}_windows_x64.zip`,
-                    icon: Windows
+                    icon: Windows,
+                    event: 'download',
+                    eventPlatform: 'windows',
+                    eventType: 'portable',
+                    eventArch: 'x64',
+                    eventLang: 'zh'
                 },
                 {
                     text: 'Windows arm64安装包 (.exe)',
                     link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/TinyRDM_Setup_${version}_windows_arm64.exe`,
-                    icon: Windows
+                    icon: Windows,
+                    event: 'download',
+                    eventPlatform: 'windows',
+                    eventType: 'setup',
+                    eventArch: 'arm64',
+                    eventLang: 'zh'
                 },
                 {
                     text: 'Windows arm64绿色版 (.zip)',
                     link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/TinyRDM_Portable_${version}_windows_arm64.zip`,
-                    icon: Windows
+                    icon: Windows,
+                    event: 'download',
+                    eventPlatform: 'windows',
+                    eventType: 'portable',
+                    eventArch: 'arm64',
+                    eventLang: 'zh'
                 },
                 {
                     text: 'macOS Apple芯片 (.dmg)',
                     link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/TinyRDM_${version}_mac_arm64.dmg`,
-                    icon: Apple
+                    icon: Apple,
+                    event: 'download',
+                    eventPlatform: 'mac',
+                    eventType: 'dmg',
+                    eventArch: 'arm64',
+                    eventLang: 'zh'
                 },
                 {
                     text: 'macOS Intel芯片 (.dmg)',
                     link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/TinyRDM_Portable_${version}_windows_x64.zip`,
-                    icon: Apple
+                    icon: Apple,
+                    event: 'download',
+                    eventPlatform: 'mac',
+                    eventType: 'dmg',
+                    eventArch: 'x64',
+                    eventLang: 'zh'
                 },
                 {
                     text: 'Linux 64位deb (.deb)',
                     link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/tiny-rdm_${version}_linux_amd64.deb`,
-                    icon: Linux
+                    icon: Linux,
+                    event: 'download',
+                    eventPlatform: 'linux',
+                    eventType: 'deb',
+                    eventArch: 'amd64',
+                    eventLang: 'zh'
                 },
-                {text: 'Linux 64位AppImage (.AppImage)', link: '#', icon: Linux},
+                {
+                    text: 'Linux 64位AppImage (.AppImage)',
+                    link: '#',
+                    icon: Linux,
+                    event: 'download',
+                    eventPlatform: 'linux',
+                    eventType: 'AppImage',
+                    eventArch: 'amd64',
+                    eventLang: 'zh'
+                },
             ]
         default:
             return [
                 {
                     text: 'Windows x64 Installer (.exe)',
                     link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_Setup_${version}_windows_x64.exe`,
-                    icon: Windows
+                    icon: Windows,
+                    event: 'download',
+                    eventPlatform: 'windows',
+                    eventType: 'setup',
+                    eventArch: 'x64',
+                    eventLang: 'en'
                 },
                 {
                     text: 'Windows x64 Portable (.zip)',
                     link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_Portable_${version}_windows_x64.zip`,
-                    icon: Windows
+                    icon: Windows,
+                    event: 'download',
+                    eventPlatform: 'windows',
+                    eventType: 'portable',
+                    eventArch: 'x64',
+                    eventLang: 'en'
                 },
                 {
                     text: 'Windows arm64 Installer (.exe)',
                     link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_Setup_${version}_windows_arm64.exe`,
-                    icon: Windows
+                    icon: Windows,
+                    event: 'download',
+                    eventPlatform: 'windows',
+                    eventType: 'setup',
+                    eventArch: 'arm64',
+                    eventLang: 'en'
                 },
                 {
                     text: 'Windows arm64 Portable (.zip)',
                     link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_Portable_${version}_windows_arm64.zip`,
-                    icon: Windows
+                    icon: Windows,
+                    event: 'download',
+                    eventPlatform: 'windows',
+                    eventType: 'portable',
+                    eventArch: 'arm64',
+                    eventLang: 'en'
                 },
                 {
                     text: 'macOS Apple Silicon (.dmg)',
                     link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_${version}_mac_arm64.dmg`,
-                    icon: Apple
+                    icon: Apple,
+                    event: 'download',
+                    eventPlatform: 'mac',
+                    eventType: 'dmg',
+                    eventArch: 'arm64',
+                    eventLang: 'en'
                 },
                 {
                     text: 'macOS Intel (.dmg)',
                     link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/TinyRDM_${version}_mac_intel.dmg`,
-                    icon: Apple
+                    icon: Apple,
+                    event: 'download',
+                    eventPlatform: 'mac',
+                    eventType: 'dmg',
+                    eventArch: 'x64',
+                    eventLang: 'en'
                 },
                 {
                     text: 'Linux (.deb)',
                     link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/tiny-rdm_${version}_linux_amd64.deb`,
-                    icon: Linux
+                    icon: Linux,
+                    event: 'download',
+                    eventPlatform: 'linux',
+                    eventType: 'deb',
+                    eventArch: 'amd64',
+                    eventLang: 'en'
                 },
-                {text: 'Linux (.AppImage)', link: '#', icon: Linux},
+                {
+                    text: 'Linux (.AppImage)',
+                    link: '#',
+                    icon: Linux,
+                    event: 'download',
+                    eventPlatform: 'linux',
+                    eventType: 'AppImage',
+                    eventArch: 'amd64',
+                    eventLang: 'en'
+                },
             ]
     }
 })
@@ -117,7 +205,13 @@ const downloadMenu = computed(() => {
       <ul class="dropdown-menu">
         <li v-for="(m, i) in downloadMenu" :key="i" style="font-size: 14px">
           <component :is="m.icon"/>
-          <a :href="m.link" target="_blank">{{ m.text }}</a>
+          <a :data-umami-event="m.event"
+             :data-umami-event-arch="m.eventArch"
+             :data-umami-event-lang="m.eventLang"
+             :data-umami-event-platform="m.eventPlatform"
+             :data-umami-event-type="m.eventType"
+             :href="m.link"
+             target="_blank">{{ m.text }}</a>
         </li>
       </ul>
     </div>
