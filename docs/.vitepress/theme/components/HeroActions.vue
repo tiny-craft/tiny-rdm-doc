@@ -306,6 +306,7 @@ const downloadMenu = computed(() => {
     flex-direction: row;
     gap: 5px;
     align-items: center;
+    color: var(--vp-button-brand-text);
 }
 
 .dropdown-menu li:hover {
