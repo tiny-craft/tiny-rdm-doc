@@ -22,7 +22,7 @@
 - 如果您使用 M1/M2/M3 芯片的 Mac，请下载 `mac_intel (.dmg)`
 - 如果您使用 Intel 芯片的 Mac，请下载 `mac_intel (.dmg)`
 
-下载完成之后打开 `dmg` 文件，将 `Tiny RDM` 拖到 `Application` 内即可。
+下载完成之后打开 `.dmg` 文件，将 `Tiny RDM.app` 拖到 `Applications` 目录内即可。
 
 ::: danger 故障排除
 
@@ -35,6 +35,8 @@
 ```bash
 sudo xattr -d com.apple.quarantine /Applications/Tiny\ RDM.app
 ```
+
+然后再次尝试打开`Tiny RDM`。
 
 - 此外，`dmg`安装包内也包含了 `损坏修复` 脚本，可通过双击执行并输入管理员密码，快速修复以上问题
 
