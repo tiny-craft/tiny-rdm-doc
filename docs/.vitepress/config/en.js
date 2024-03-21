@@ -45,6 +45,7 @@ function sidebarChangelog() {
         {
             text: 'Changelog',
             items: [
+                {text: 'v1.1.10', link: '/v1.1.10'},
                 {text: 'v1.1.9', link: '/v1.1.9'},
                 {text: 'v1.1.8', link: '/v1.1.8'},
                 {text: 'v1.1.6', link: '/v1.1.6'},
