@@ -102,7 +102,7 @@ const downloadMenu = computed(() => {
                 },
                 {
                     text: 'Linux 64位AppImage (.AppImage)',
-                    link: '#',
+                    link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/tiny-rdm_${version}_linux_amd64.AppImage`,
                     icon: Linux,
                     event: 'download',
                     eventPlatform: 'linux',
@@ -185,7 +185,7 @@ const downloadMenu = computed(() => {
                 },
                 {
                     text: 'Linux (.AppImage)',
-                    link: '#',
+                    link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/tiny-rdm_${version}_linux_amd64.AppImage`,
                     icon: Linux,
                     event: 'download',
                     eventPlatform: 'linux',
