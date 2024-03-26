@@ -19,7 +19,7 @@ If you receive a prompt that you need to install the Webview runtime, but you ca
 
 ### Install Manually
 
-- If you are using a Mac with M1/M2/M3 chip, please download `mac_intel (.dmg)`
+- If you are using a Mac with M1/M2/M3 chip, please download `mac_arm64 (.dmg)`
 - If you are using a Mac with Intel chip, please download `mac_intel (.dmg)`
 
 After downloading, open the `.dmg` file and drag `Tiny RDM.app` into the `Applications` folder.

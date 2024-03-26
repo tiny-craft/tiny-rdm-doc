@@ -19,7 +19,7 @@
 
 ### 手动下载安装
 
-- 如果您使用 M1/M2/M3 芯片的 Mac，请下载 `mac_intel (.dmg)`
+- 如果您使用 M1/M2/M3 芯片的 Mac，请下载 `mac_arm64 (.dmg)`
 - 如果您使用 Intel 芯片的 Mac，请下载 `mac_intel (.dmg)`
 
 下载完成之后打开 `.dmg` 文件，将 `Tiny RDM.app` 拖到 `Applications` 目录内即可。
