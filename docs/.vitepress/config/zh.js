@@ -88,9 +88,10 @@ function sidebarUserGuide() {
             ]
         },
         {
-            text: '高级配置',
+            text: '用法和配置',
             items: [
                 {text: '连接服务器', link: '/connection'},
+                {text: '键查询', link: '/filter/'},
                 {text: '自定义解码', link: '/custom-decoder/'},
                 {text: '个性化配置', link: '/custom-config'}
             ]

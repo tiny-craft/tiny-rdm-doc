@@ -92,9 +92,10 @@ function sidebarUserGuide() {
             ]
         },
         {
-            text: 'Configuration',
+            text: 'Usage and Configuration',
             items: [
                 {text: 'Connection', link: '/connection'},
+                {text: 'Key Querying', link: '/filter/'},
                 {text: 'Custom Decoder', link: '/custom-decoder/'},
                 {text: 'Personalized', link: '/custom-config'}
             ]
