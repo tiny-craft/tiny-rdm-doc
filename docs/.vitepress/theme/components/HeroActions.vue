@@ -82,7 +82,7 @@ const downloadMenu = computed(() => {
                 },
                 {
                     text: 'macOS Intel芯片 (.dmg)',
-                    link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/TinyRDM_Portable_${version}_windows_x64.zip`,
+                    link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/TinyRDM_Portable_${version}_mac_intel.dmg`,
                     icon: Apple,
                     event: 'download',
                     eventPlatform: 'mac',
