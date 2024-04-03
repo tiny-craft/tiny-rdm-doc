@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Key Filtering and Matching Queries
 
 The key list on the left side of Tiny RDM provides filtering and matching queries. By filtering and querying, you can quickly locate the keys you need, reducing unnecessary scanning.
@@ -11,6 +15,8 @@ Enter the keyword or phrase you want to find in the search input, either partial
 ## Querying
 
 In addition to entering the keyword, a query operation requires you to press `Enter` or click the 🔍 button. After this, Tiny RDM will use the keyword to rescan and match the server data, and display the results after loading is complete. If the number of search results exceeds the single scan limit, you can click `Load More Keys` or `Load All Left Keys` to complete the batch loading.
+
+If you need to modify or replace current query keywords, you can `double-click` the tag or enter a new keyword and press enter again.
 
 In query status, the keywords are displayed as tags in the input box: <img src="./images/query_status.png" width="300" alt="Input box in query status" />
 
