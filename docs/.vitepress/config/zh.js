@@ -91,6 +91,7 @@ function sidebarUserGuide() {
             text: '用法和配置',
             items: [
                 {text: '连接服务器', link: '/connection'},
+                {text: '键加载', link: '/key-loading/'},
                 {text: '键查询', link: '/filter/'},
                 {text: '自定义解码', link: '/custom-decoder/'},
                 {text: '个性化配置', link: '/custom-config'}
