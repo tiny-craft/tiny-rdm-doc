@@ -46,6 +46,7 @@ function sidebarChangelog() {
             text: '更新日志',
             // collapsed: false,
             items: [
+                {text: 'v1.1.11', link: '/v1.1.11'},
                 {text: 'v1.1.10', link: '/v1.1.10'},
                 {text: 'v1.1.9', link: '/v1.1.9'},
                 {text: 'v1.1.8', link: '/v1.1.8'},
