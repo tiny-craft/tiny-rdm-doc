@@ -27,7 +27,7 @@ export default defineConfig({
         socialLinks: [
             {icon: 'github', link: 'https://github.com/tiny-craft/tiny-rdm'},
             {icon: 'discord', link: 'https://discord.gg/VTFbBMGjWh'},
-            {icon: 'twitter', link: 'https://twitter.com/Lykin53448'}
+            {icon: 'twitter', link: 'https://x.com/LykinHuang'}
         ],
         search: {
             provider: 'local'
