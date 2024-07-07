@@ -1,10 +1,11 @@
-import {version} from '../../../package.json'
 import fs from 'fs'
 import path from 'path'
 
 export const META_URL = 'https://redis.tinycraft.cc'
 export const META_TITLE = 'Tiny RDM'
 export const META_DESCRIPTION = '新一代轻量级Redis GUI,直观管理Redis数据库,支持多平台Windows、Mac和Linux系统,安装简单迅速,连接本地及远程Redis,可视化展示键值数据,快速操作键值对,内置控制台直接运行命令,数据浏览备份导出,慢日志查询,新手高级用户首选,大幅提高Redis应用开发效率。'
+
+const versions = getAllChangelog()
 
 export const zhConfig = {
     description: META_DESCRIPTION,
@@ -16,10 +17,10 @@ export const zhConfig = {
         ['meta', {property: 'twitter:description', content: META_DESCRIPTION}],
     ],
     themeConfig: {
-        nav: nav(),
+        nav: nav(versions[0]),
         sidebar: {
             '/zh/guide/': {base: '/zh/guide', items: sidebarUserGuide()},
-            '/zh/changelog/': {base: '/zh/changelog', items: sidebarChangelog()},
+            '/zh/changelog/': {base: '/zh/changelog', items: sidebarChangelog(versions)},
         },
         footer: {
             message: '基于GPL-3.0开源许可协议',
@@ -28,13 +29,13 @@ export const zhConfig = {
     }
 }
 
-function nav() {
+function nav(version = 'v1.0.0') {
     return [
         {text: '主页', link: '/zh/'},
         {text: '使用指南', link: '/zh/guide/', activeMatch: '/zh/guide/'},
         {
-            text: 'v' + version, items: [
-                {text: '更新日志', link: '/zh/changelog/' + lastChangelog(), activeMatch: '/zh/changelog/'},
+            text: version, items: [
+                {text: '更新日志', link: '/zh/changelog/' + version, activeMatch: '/zh/changelog/'},
             ]
         },
         // {text: 'Redis指南', link: '#'},
@@ -42,22 +43,24 @@ function nav() {
     ]
 }
 
-function sidebarChangelog() {
-    const changelogDir = path.join(__dirname, '../../', 'changelog')
+function getAllChangelog() {
+    const changelogDir = path.join(__dirname, '../../', 'zh', 'changelog')
     let files = fs.readdirSync(changelogDir)
-    const items = files.map(file => {
-        const name = file.replace(/\.md$/, '')
-        return {text: name, link: '/' + name}
+    return files.map(file => {
+        return file.replace(/\.md$/, '')
     }).sort((a, b) => {
-        return b.text.localeCompare(a.text, undefined, {numeric: true, sensitivity: 'base'})
+        return b.localeCompare(a, undefined, {numeric: true, sensitivity: 'base'})
     })
+}
 
-
+function sidebarChangelog() {
     return [
         {
             text: '更新日志',
             // collapsed: false,
-            items: items
+            items: versions.map(v => {
+                return {text: v, link: '/' + v}
+            })
         },
     ]
 }

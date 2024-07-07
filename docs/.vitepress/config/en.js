@@ -1,10 +1,11 @@
-import {version} from '../../../package.json'
 import fs from 'fs'
 import path from 'path'
 
 export const META_URL = 'https://redis.tinycraft.cc'
 export const META_TITLE = 'Tiny RDM'
 export const META_DESCRIPTION = 'Modern lightweight Redis GUI desktop manager, intuitive Redis database administration, supports multi-platform Windows, Mac and Linux, easy fast installation, connect local and remote Redis, visualize key-value data, quickly operate on keys and values, built-in console to execute commands directly, data browsing and export, slow log query, perfect for beginners and experts alike, tremendously improves Redis application development efficiency.'
+
+const versions = getAllChangelog()
 
 export const enConfig = {
     description: META_DESCRIPTION,
@@ -16,10 +17,10 @@ export const enConfig = {
         ['meta', {property: 'twitter:description', content: META_DESCRIPTION}],
     ],
     themeConfig: {
-        nav: nav(),
+        nav: nav(versions[0]),
         sidebar: {
             '/guide/': {base: '/guide', items: sidebarUserGuide()},
-            '/changelog/': {base: '/changelog', items: sidebarChangelog()},
+            '/changelog/': {base: '/changelog', items: sidebarChangelog(versions)},
         },
         footer: {
             message: 'Released under the GPL-3.0 License.',
@@ -28,13 +29,13 @@ export const enConfig = {
     }
 }
 
-function nav() {
+function nav(version = 'v1.0.0') {
     return [
         {text: 'Home', link: '/'},
         {text: 'User Guide', link: '/guide/', activeMatch: '/guide/'},
         {
-            text: 'v' + version, items: [
-                {text: 'Changelog', link: '/changelog/' + lastChangelog(), activeMatch: '/changelog/'},
+            text: version, items: [
+                {text: 'Changelog', link: '/changelog/' + version, activeMatch: '/changelog/'},
             ]
         }
         // {text: 'Redis Guide', link: '#'},
@@ -42,34 +43,25 @@ function nav() {
     ]
 }
 
-function sidebarChangelog() {
+function getAllChangelog() {
     const changelogDir = path.join(__dirname, '../../', 'changelog')
     let files = fs.readdirSync(changelogDir)
-    const items = files.map(file => {
-        const name = file.replace(/\.md$/, '')
-        return {text: name, link: '/' + name}
+    return files.map(file => {
+        return file.replace(/\.md$/, '')
     }).sort((a, b) => {
-        return b.text.localeCompare(a.text, undefined, {numeric: true, sensitivity: 'base'})
+        return b.localeCompare(a, undefined, {numeric: true, sensitivity: 'base'})
     })
+}
 
+function sidebarChangelog(versions) {
     return [
         {
             text: 'Changelog',
-            items: items
+            items: versions.map(v => {
+                return {text: v, link: '/' + v}
+            })
         },
     ]
-}
-
-function lastChangelog() {
-    const clist = sidebarChangelog()
-    for (const item of clist) {
-        if (item.text === 'Changelog') {
-            if (item.items.length > 0) {
-                return item.items[0].text
-            }
-        }
-    }
-    return 'v1.0.0'
 }
 
 function sidebarUserGuide() {
