@@ -1,4 +1,6 @@
 import {version} from '../../../package.json'
+import fs from 'fs'
+import path from 'path'
 
 export const META_URL = 'https://redis.tinycraft.cc'
 export const META_TITLE = 'Tiny RDM'
@@ -41,30 +43,19 @@ function nav() {
 }
 
 function sidebarChangelog() {
+    const changelogDir = path.join(__dirname, '../../', 'changelog')
+    let files = fs.readdirSync(changelogDir)
+    const items = files.map(file => {
+        const name = file.replace(/\.md$/, '')
+        return {text: name, link: '/' + name}
+    }).sort((a, b) => {
+        return b.text.localeCompare(a.text, undefined, {numeric: true, sensitivity: 'base'})
+    })
+
     return [
         {
             text: 'Changelog',
-            items: [
-                {text: 'v1.1.14', link: '/v1.1.14'},
-                {text: 'v1.1.13', link: '/v1.1.13'},
-                {text: 'v1.1.12', link: '/v1.1.12'},
-                {text: 'v1.1.11', link: '/v1.1.11'},
-                {text: 'v1.1.10', link: '/v1.1.10'},
-                {text: 'v1.1.9', link: '/v1.1.9'},
-                {text: 'v1.1.8', link: '/v1.1.8'},
-                {text: 'v1.1.6', link: '/v1.1.6'},
-                {text: 'v1.1.5', link: '/v1.1.5'},
-                {text: 'v1.1.4', link: '/v1.1.4'},
-                {text: 'v1.1.2', link: '/v1.1.2'},
-                {text: 'v1.1.0', link: '/v1.1.0'},
-                {text: 'v1.0.9', link: '/v1.0.9'},
-                {text: 'v1.0.8', link: '/v1.0.8'},
-                {text: 'v1.0.7', link: '/v1.0.7'},
-                {text: 'v1.0.5', link: '/v1.0.5'},
-                {text: 'v1.0.4', link: '/v1.0.4'},
-                {text: 'v1.0.2', link: '/v1.0.2'},
-                {text: 'v1.0.1', link: '/v1.0.1'},
-            ]
+            items: items
         },
     ]
 }
