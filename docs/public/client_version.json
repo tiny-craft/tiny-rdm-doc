@@ -1,0 +1,19 @@
+{
+  "version": "1.2.2",
+  "changelog": {
+    "en": "https://redis.tinycraft.cc/changelog/v1.2.1.html",
+    "zh": "https://redis.tinycraft.cc/zh/changelog/v1.2.1.html"
+  },
+  "description": {
+    "en": "TODO: Upgrade Description",
+    "zh": "TODO: 更新描述"
+  },
+  "download_url": {
+    "en": "",
+    "zh": ""
+  },
+  "download_page": {
+    "en": "https://redis.tinycraft.cc/",
+    "zh": "https://redis.tinycraft.cc/zh/"
+  }
+}
