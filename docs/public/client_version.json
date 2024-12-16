@@ -1,8 +1,8 @@
 {
-  "version": "1.2.3",
+  "version": "1.2.2",
   "changelog": {
-    "en": "https://redis.tinycraft.cc/changelog/v1.2.1.html",
-    "zh": "https://redis.tinycraft.cc/zh/changelog/v1.2.1.html"
+    "en": "https://redis.tinycraft.cc/changelog/v1.2.2.html",
+    "zh": "https://redis.tinycraft.cc/zh/changelog/v1.2.2.html"
   },
   "description": {
     "en": "",
