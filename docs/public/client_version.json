@@ -1,12 +1,12 @@
 {
-  "version": "1.2.2",
+  "version": "1.2.3",
   "changelog": {
     "en": "https://redis.tinycraft.cc/changelog/v1.2.1.html",
     "zh": "https://redis.tinycraft.cc/zh/changelog/v1.2.1.html"
   },
   "description": {
-    "en": "TODO: Upgrade Description",
-    "zh": "TODO: 更新描述"
+    "en": "",
+    "zh": ""
   },
   "download_url": {
     "en": "",
@@ -15,5 +15,12 @@
   "download_page": {
     "en": "https://redis.tinycraft.cc/",
     "zh": "https://redis.tinycraft.cc/zh/"
-  }
+  },
+  "sponsor": [
+    {
+      "name":"\uD83D\uDD25由雨云提供CDN赞助",
+      "link": "https://www.rainyun.com/lykin_?s=app",
+      "region": ["zh"]
+    }
+  ]
 }
