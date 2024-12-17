@@ -8,6 +8,15 @@ import {version} from '../../../../package.json'
 
 const {lang} = useData()
 
+const actionDescText = computed(() => {
+    switch (lang.value) {
+        case 'zh':
+            return '🔥由雨云提供CDN赞助'
+        default:
+            return '🔥 CDN Sponsorship Provided by Yuyun'
+    }
+})
+
 const downloadText = computed(() => {
     switch (lang.value) {
         case 'zh':
@@ -199,44 +208,61 @@ const downloadMenu = computed(() => {
 </script>
 
 <template>
-  <div class="actions">
-    <div class="action">
-      <a class="action-button brand dropdown-button">{{ downloadText }}</a>
-      <ul class="dropdown-menu">
-        <li v-for="(m, i) in downloadMenu" :key="i" style="font-size: 14px">
-          <component :is="m.icon"/>
-          <a :data-umami-event="m.event"
-             :data-umami-event-arch="m.eventArch"
-             :data-umami-event-lang="m.eventLang"
-             :data-umami-event-platform="m.eventPlatform"
-             :data-umami-event-type="m.eventType"
-             :href="m.link"
-             target="_blank">{{ m.text }}</a>
-        </li>
-      </ul>
+    <div class="action-wrap">
+        <div class="actions">
+            <div class="action">
+                <a class="action-button brand dropdown-button">{{ downloadText }}</a>
+                <ul class="dropdown-menu">
+                    <li v-for="(m, i) in downloadMenu" :key="i" style="font-size: 14px">
+                        <component :is="m.icon"/>
+                        <a :data-umami-event="m.event"
+                           :data-umami-event-arch="m.eventArch"
+                           :data-umami-event-lang="m.eventLang"
+                           :data-umami-event-platform="m.eventPlatform"
+                           :data-umami-event-type="m.eventType"
+                           :href="m.link"
+                           target="_blank">{{ m.text }}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="action">
+                <a class="action-button alt"
+                   href="https://github.com/tiny-craft/tiny-rdm" rel="noreferrer"
+                   target="_blank">
+                    {{ viewText }}
+                </a>
+            </div>
+        </div>
+        <a v-if="actionDescText" class="action-desc" href="https://www.rainyun.com/lykin_?s=app" target="_blank">
+            {{ actionDescText }}
+        </a>
     </div>
-    <div class="action">
-      <a class="action-button alt"
-         href="https://github.com/tiny-craft/tiny-rdm" rel="noreferrer"
-         target="_blank">
-        {{ viewText }}
-      </a>
-    </div>
-  </div>
 </template>
 
 <style scoped>
-.actions {
+.action-wrap {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin: -6px;
     padding-top: 24px;
     justify-content: center;
 }
 
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .action {
     flex-shrink: 0;
     padding: 6px;
+}
+
+.action-desc {
+    margin-left: 16px;
+    color: var(--vp-button-alt-text);
+    font-size: 13px;
+    text-decoration: underline;
 }
 
 @media (min-width: 640px) {

@@ -1,7 +1,7 @@
 <script setup>
 import DefaultTheme from "vitepress/theme"
 import {useData} from "vitepress"
-import {computed, ref, onMounted} from 'vue'
+import {computed, onMounted, ref} from 'vue'
 
 const {Layout} = DefaultTheme
 const {page, isDark, lang, frontmatter: fm} = useData()
@@ -21,11 +21,11 @@ const preview = computed(() => {
 </script>
 
 <template>
-  <div class="preview-wrapper">
-    <div class="preview-inner">
-      <img :src="preview" alt="preview"/>
+    <div class="preview-wrapper">
+        <div class="preview-inner">
+            <img :src="preview" alt="preview"/>
+        </div>
     </div>
-  </div>
 </template>
 
 <style scoped>
