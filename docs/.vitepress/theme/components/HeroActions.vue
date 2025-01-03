@@ -11,7 +11,7 @@ const {lang} = useData()
 const actionDescText = computed(() => {
     switch (lang.value) {
         case 'zh':
-            return '🔥由雨云提供CDN赞助'
+            return '🔥由超大带宽的雨云提供CDN赞助'
         default:
             return '🔥 CDN Sponsorship Provided by Yuyun'
     }
