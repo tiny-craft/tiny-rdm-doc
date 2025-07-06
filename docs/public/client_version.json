@@ -1,8 +1,8 @@
 {
-  "version": "1.2.3",
+  "version": "1.2.4",
   "changelog": {
-    "en": "https://redis.tinycraft.cc/changelog/v1.2.3.html",
-    "zh": "https://redis.tinycraft.cc/zh/changelog/v1.2.3.html"
+    "en": "https://redis.tinycraft.cc/changelog/v1.2.4.html",
+    "zh": "https://redis.tinycraft.cc/zh/changelog/v1.2.4.html"
   },
   "description": {
     "en": "",
@@ -18,7 +18,7 @@
   },
   "sponsor": [
     {
-      "name":"\uD83D\uDD25由超大带宽的雨云提供CDN赞助",
+      "name":"\uD83D\uDD25由超大带宽的雨云赞助服务器",
       "link": "https://www.rainyun.com/lykin_?s=app",
       "region": ["zh"]
     }
