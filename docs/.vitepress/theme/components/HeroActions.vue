@@ -110,6 +110,16 @@ const downloadMenu = computed(() => {
                     eventLang: 'zh'
                 },
                 {
+                    text: 'Linux webkit2gtk4.1 64位deb (.deb)',
+                    link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/tiny-rdm_${version}_linux_amd64_webkit2_41.deb`,
+                    icon: Linux,
+                    event: 'download',
+                    eventPlatform: 'linux',
+                    eventType: 'deb',
+                    eventArch: 'amd64',
+                    eventLang: 'zh'
+                },
+                {
                     text: 'Linux 64位AppImage (.AppImage)',
                     link: `https://gitee.com/tiny-craft-zh/tiny-rdm/releases/download/v${version}/tiny-rdm_${version}_linux_amd64.AppImage`,
                     icon: Linux,
@@ -185,6 +195,16 @@ const downloadMenu = computed(() => {
                 {
                     text: 'Linux (.deb)',
                     link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/tiny-rdm_${version}_linux_amd64.deb`,
+                    icon: Linux,
+                    event: 'download',
+                    eventPlatform: 'linux',
+                    eventType: 'deb',
+                    eventArch: 'amd64',
+                    eventLang: 'en'
+                },
+                {
+                    text: 'Linux webkit2gtk4.1 (.deb)',
+                    link: `https://github.com/tiny-craft/tiny-rdm/releases/download/v${version}/tiny-rdm_${version}_linux_amd64_webkit2_41.deb`,
                     icon: Linux,
                     event: 'download',
                     eventPlatform: 'linux',
