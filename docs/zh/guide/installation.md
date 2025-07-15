@@ -71,7 +71,7 @@ chmod u+x tiny_rdm_{version}_linux_amd64.AppImage
 ### 运行环境要求
 
 * Go（最新版本）
-* Node.js >= 16
+* Node.js >= 20
 * NPM >= 9
 
 ### 安装wails

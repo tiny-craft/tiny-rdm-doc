@@ -70,7 +70,7 @@ In the latest version of [Webkit2Gtk](https://archlinux.org/packages/extra/x86_6
 ### Prerequisites
 
 * Go (latest version)
-* Node.js >= 16
+* Node.js >= 20
 * NPM >= 9
 
 ### Install wails
