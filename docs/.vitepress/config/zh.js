@@ -23,7 +23,7 @@ export const zhConfig = {
             '/zh/changelog/': {base: '/zh/changelog', items: sidebarChangelog(versions)},
         },
         footer: {
-            message: '友情链接 <a href="https://www.zlpj.com/" title="探索AI与数字未来" target="_blank">竹林品鉴</a> | <a href="https://ch2report.com/" target="_blank">Chat2Report</a> | <a href="https://tempmail100.com" target="_blank">Temp Mail</a> | <a href="https://stardots.io/" target="_blank">Star Dots</a><br/><br/>基于GPL-3.0开源许可协议',
+            message: '友情链接 <a href="https://xterminal.cn/">XTerminal</a> | <a href="https://www.zlpj.com/" title="探索AI与数字未来" target="_blank">竹林品鉴</a> | <a href="https://ch2report.com/" target="_blank">Chat2Report</a> | <a href="https://tempmail100.com" target="_blank">Temp Mail</a> | <a href="https://stardots.io/" target="_blank">Star Dots</a><br/><br/>基于GPL-3.0开源许可协议',
             copyright: 'Copyright © 2023-present Tiny Craft'
         }
     }
