@@ -253,7 +253,7 @@ const downloadMenu = computed(() => {
                 </a>
             </div>
         </div>
-        <a v-if="actionDescText" class="action-desc" href="https://www.rainyun.com/lykin_?s=app" target="_blank">
+        <a v-if="actionDescText" class="action-desc" href="https://www.rainyun.com/lykin_?s=web" target="_blank">
             {{ actionDescText }}
         </a>
     </div>
