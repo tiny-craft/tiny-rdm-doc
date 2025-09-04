@@ -5,6 +5,9 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "devDependencies": {
     "vitepress": "^1.6.4"
   },
