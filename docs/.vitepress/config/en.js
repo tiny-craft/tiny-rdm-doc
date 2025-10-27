@@ -23,7 +23,7 @@ export const enConfig = {
             '/changelog/': {base: '/changelog', items: sidebarChangelog(versions)},
         },
         footer: {
-            message: 'Links: <a href="https://xterminal.cn/">XTerminal</a> | <a href="https://www.mxtag.com/" title="Exploring AI and the Digital Future" target="_blank">MXTAG</a> | <a href="https://ch2report.com/" target="_blank">Chat2Report</a> | <a href="https://tempmail100.com" target="_blank">Temp Mail</a> | <a href="https://stardots.io/" target="_blank">Star Dots</a><br/><br/>Released under the GPL-3.0 License.',
+            message: 'Links: <a href="https://xterminal.cn/">XTerminal</a> | <a href="https://www.qmye.com/" title="QMYE" target="_blank">MXTAG</a> | <a href="https://ch2report.com/" target="_blank">Chat2Report</a> | <a href="https://tempmail100.com" target="_blank">Temp Mail</a> | <a href="https://stardots.io/" target="_blank">Star Dots</a><br/><br/>Released under the GPL-3.0 License.',
             copyright: 'Copyright © 2023-present Tiny Craft'
         }
     }
