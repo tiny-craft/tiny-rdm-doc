@@ -1,0 +1,35 @@
+{
+  "version": "1.2.3",
+  "changelog": {
+    "en": "https://tinyrdm.com/changelog/v1.2.3.html",
+    "zh": "https://tinyrdm.com/zh/changelog/v1.2.3.html"
+  },
+  "description": {
+    "en": "",
+    "zh": ""
+  },
+  "download_url": {
+    "en": "",
+    "zh": ""
+  },
+  "download_page": {
+    "en": "https://tinyrdm.com/",
+    "zh": "https://tinyrdm.com/zh/"
+  },
+  "sponsor": [
+    {
+      "name":"\uD83D\uDD25由超大带宽的雨云赞助服务器",
+      "link": "https://www.rainyun.com/lykin_?s=app",
+      "region": ["zh"]
+    }
+  ],
+  "banner": [
+    {
+      "lang": "zh",
+      "title": "全新版本推荐",
+      "content": "全新重写版本Tiny RDM正式发布",
+      "button": "前往试用",
+      "link": "https://tinycraft.com"
+    }
+  ]
+}
