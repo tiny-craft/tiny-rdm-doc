@@ -23,7 +23,7 @@ export const zhConfig = {
             '/zh/changelog/': {base: '/zh/changelog', items: sidebarChangelog(versions)},
         },
         footer: {
-            message: '友情链接 <a href="https://redisee.com/">Redisee</a> | <a href="https://xterminal.cn/">XTerminal</a> | <a href="https://www.qmye.com/" title="奇妙页" target="_blank">奇妙页</a> | <a href="https://ch2report.com/" target="_blank">Chat2Report</a> | <a href="https://tempmail100.com" target="_blank">Temp Mail</a> | <a href="https://stardots.io/" target="_blank">Star Dots</a><br/><br/>基于GPL-3.0开源许可协议',
+            message: '友情链接 <a href="https://redisee.com/" title="比Tiny RDM更专业的Redis桌面客户端" target="_blank">Redisee</a> | <a href="https://xterminal.cn/" title="XTerminal" target="_blank">XTerminal</a> | <a href="https://www.qmye.com/" title="奇妙页" target="_blank">奇妙页</a> | <a href="https://flymux.com/register?promo=TINYRDM" title="QMYE" target="_blank">FlyMux</a> | <a href="https://ch2report.com/" target="_blank">Chat2Report</a> | <a href="https://tempmail100.com" target="_blank">Temp Mail</a> | <a href="https://stardots.io/" target="_blank">Star Dots</a><br/><br/>基于GPL-3.0开源许可协议',
             copyright: 'Copyright © 2023-present Tiny Craft'
         }
     }
